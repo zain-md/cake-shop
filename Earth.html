@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Explore</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Urwa code */
+        .container {
+            position: relative;
+            text-align: left;
+            color: white;
+        }
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            transform: translate(-50%, -50%);
+        }
+        .centered h1{
+            font-size: 70px;
+        }
+        .centered p{
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        video{
+            width: 100%;
+            height: auto;
+        }
+        
+        .navbar-toggler-icon {
+    background-image: linear-gradient(to right, #ffffff 1px, transparent 1px),
+                      linear-gradient(to bottom, #ffffff 1px, transparent 1px);
+    background-size: 5px 5px;
+    background-position: center;
+}
+    </style>
+</head>
+<body style="background-color: rgb(1, 2, 15);">
+    <!-- Urwa code -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    // Visitor count logic
+    let count = localStorage.getItem('visitorCount') || 0;
+    count++;
+    localStorage.setItem('visitorCount', count);
+    document.getElementById('count').textContent = count;
+
+    // Ticker and Geolocation
+    function updateTicker() {
+        const now = new Date();
+        document.getElementById('datetime').textContent = now.toLocaleString();
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                const { latitude, longitude } = position.coords;
+                document.getElementById('location').textContent = `Lat: ${latitude.toFixed(2)}, Long: ${longitude.toFixed(2)}`;
+            });
+        }
+    }
+    
+    setInterval(updateTicker, 1000);
+    });
+</script>
+    <header class="text-white text-center py-4" style="background-color:  rgb(9, 10, 24);">
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="images/logo.png.png" alt="Sky Gazing Logo" class="logo" height="160px" width="130px">
+            <div id="visitor-count">Visitor Count: <span id="count">0</span></div>
+        </div>
+        <h1 class="display-4">SKY GAZING</h1>
+        <p class="lead">Explore the wonders of the universe.</p>
+        
+    </header>
+    <hr class="bg-white">
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: rgb(97, 142, 182);"><img src="images/logo.png.png" height="80px" width="70px">Sky Gazing</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarnav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="container-fluid"> 
+          <div class="collapse navbar-collapse justify-content-end" id="navbarnav">
+            <ul class="navbar-nav nav-pills ">
+              <li class="nav-item">
+                <a class="nav-link" href="Sky Gazing.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Sky Gazing.html#Planets">Planets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Sky Gazing.html#Star gazing">Star gazing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="About us.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <hr class="bg-white">
+        <div class="container">
+            <img src="images/earth.webp" class="w-100">
+            <div class="centered mt-3">
+                <h1>Earth</h1>
+                <p>Earth – our home planet – is the third planet from the Sun, and the fifth largest planet. It's the only place we know of inhabited by living things.</p>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <h1 style="color: rgb(126, 165, 229);">INTRODUCTION</h1>
+            <p class="text-white">While Earth is only the fifth largest planet in the solar system, it is the only world in our solar system with liquid water on the surface. Just slightly larger than nearby Venus, Earth is the biggest of the four planets closest to the Sun, all of which are made of rock and metal.
+                          <br> <br>
+            Earth is the only planet in the solar system whose English name does not come from Greek or Roman mythology. The name was taken from Old English and Germanic. It simply means "the ground." There are, of course, many names for our planet in the thousands of languages spoken by the people of the third planet from the Sun.</p>
+            <h1 style="color: rgb(126, 165, 229);">Potential for Life</h1> 
+            <p class="text-white">Earth has a very hospitable temperature and mix of chemicals that have made life abundant here. Most notably, Earth is unique in that most of our planet is covered in liquid water, since the temperature allows liquid water to exist for extended periods of time. Earth's vast oceans provided a convenient place for life to begin about 3.8 billion years ago.
+                                                           <br><br>
+            Some of the features of our planet that make it great for sustaining life are changing due to the ongoing effects of climate change.</p>
+            <h1 style="color: rgb(126, 165, 229);">Size and Distance</h1>
+            <p class="text-white">With an equatorial diameter of 7926 miles (12,760 kilometers), Earth is the biggest of the terrestrial planets and the fifth largest planet in our solar system.
+                           <br><br>
+            From an average distance of 93 million miles (150 million kilometers), Earth is exactly one astronomical unit away from the Sun because one astronomical unit (abbreviated as AU), is the distance from the Sun to Earth. This unit provides an easy way to quickly compare planets' distances from the Sun.
+                           <br><br>
+            It takes about eight minutes for light from the Sun to reach our planet.</p>
+            <video autoplay loop muted>
+                <source src="videos/earth video.mp4" type="video/mp4">
+              </video>
+            <p class="text-white">A 3D model of the surface of Earth</p>  
+            <h1 style="color: rgb(126, 165, 229);">Orbit and Rotation</h1>
+            <p class="text-white">As Earth orbits the Sun, it completes one rotation every 23.9 hours. It takes 365.25 days to complete one trip around the Sun. That extra quarter of a day presents a challenge to our calendar system, which counts one year as 365 days. To keep our yearly calendars consistent with our orbit around the Sun, every four years we add one day. That day is called a leap day, and the year it's added to is called a leap year.
+                                                       <br><br>
+            Earth's axis of rotation is tilted 23.4 degrees with respect to the plane of Earth's orbit around the Sun. This tilt causes our yearly cycle of seasons. During part of the year, the northern hemisphere is tilted toward the Sun, and the southern hemisphere is tilted away. With the Sun higher in the sky, solar heating is greater in the north producing summer there. Less direct solar heating produces winter in the south. Six months later, the situation is reversed. When spring and fall begin, both hemispheres receive roughly equal amounts of heat from the Sun.</p>
+            <h1 style="color: rgb(126, 165, 229);">Moons</h1>
+            <p class="text-white">Earth is the only planet that has a single moon. Our Moon is the brightest and most familiar object in the night sky. In many ways, the Moon is responsible for making Earth such a great home. It stabilizes our planet's wobble, which has made the climate less variable over thousands of years.
+                                    <br><br>
+            Earth sometimes temporarily hosts orbiting asteroids or large rocks. They are typically trapped by Earth's gravity for a few months or years before returning to an orbit around the Sun. Some asteroids will be in a long “dance” with Earth as both orbit the Sun.
+                                    <br><br>
+            Some moons are bits of rock that were captured by a planet's gravity, but our Moon is likely the result of a collision billions of years ago. When Earth was a young planet, a large chunk of rock smashed into it, displacing a portion of Earth's interior. The resulting chunks clumped together and formed our Moon. With a radius of 1,080 miles (1,738 kilometers), the Moon is the fifth largest moon in our solar system (after Ganymede, Titan, Callisto, and Io).
+                                     <br><br>    
+            The Moon is an average of 238,855 miles (384,400 kilometers) away from Earth. That means 30 Earth-sized planets could fit in between Earth and its Moon.</p>
+            <h1 style="color: rgb(126, 165, 229);">Rings</h1>
+            <p class="text-white">Earth has no rings.</p>
+            <h1 style="color: rgb(126, 165, 229);">Formation</h1>
+            <p class="text-white">When the solar system settled into its current layout about 4.5 billion years ago, Earth formed when gravity pulled swirling gas and dust in to become the third planet from the Sun. Like its fellow terrestrial planets, Earth has a central core, a rocky mantle, and a solid crust.<p>
+            <h1 style="color: rgb(126, 165, 229);">Structure</h1>
+            <p class="text-white">Earth is composed of four main layers, starting with an inner core at the planet's center, enveloped by the outer core, mantle, and crust.
+                                     <br><br>
+            The inner core is a solid sphere made of iron and nickel metals about 759 miles (1,221 kilometers) in radius. There the temperature is as high as 9,800 degrees Fahrenheit (5,400 degrees Celsius). Surrounding the inner core is the outer core. This layer is about 1,400 miles (2,300 kilometers) thick, made of iron and nickel fluids.
+                                     <br><br>    
+            In between the outer core and crust is the mantle, the thickest layer. This hot, viscous mixture of molten rock is about 1,800 miles (2,900 kilometers) thick and has the consistency of caramel. The outermost layer, Earth's crust, goes about 19 miles (30 kilometers) deep on average on land. At the bottom of the ocean, the crust is thinner and extends about 3 miles (5 kilometers) from the seafloor to the top of the mantle.</p>
+            <h1 style="color: rgb(126, 165, 229);">Surface</h1>
+            <p class="text-white">Like Mars and Venus, Earth has volcanoes, mountains, and valleys. Earth's lithosphere, which includes the crust (both continental and oceanic) and the upper mantle, is divided into huge plates that are constantly moving. For example, the North American plate moves west over the Pacific Ocean basin, roughly at a rate equal to the growth of our fingernails. Earthquakes result when plates grind past one another, ride up over one another, collide to make mountains, or split and separate.
+                                     <br><br>
+            Earth's global ocean, which covers nearly 70% of the planet's surface, has an average depth of about 2.5 miles (4 kilometers) and contains 97% of Earth's water. Almost all of Earth's volcanoes are hidden under these oceans. Hawaii's Mauna Kea volcano is taller from base to summit than Mount Everest, but most of it is underwater. Earth's longest mountain range is also underwater, at the bottom of the Arctic and Atlantic oceans. It is four times longer than the Andes, Rockies and Himalayas combined.</p>
+            <h1 style="color: rgb(126, 165, 229);">Atmosphere</h1>
+            <p class="text-white">Near the surface, Earth has an atmosphere that consists of 78% nitrogen, 21% oxygen, and 1% other gases such as argon, carbon dioxide, and neon. The atmosphere affects Earth's long-term climate and short-term local weather and shields us from much of the harmful radiation coming from the Sun. It also protects us from meteoroids, most of which burn up in the atmosphere, seen as meteors in the night sky, before they can strike the surface as meteorites.</p>
+            <h1 style="color: rgb(126, 165, 229);">Magnetosphere</h1>
+            <p class="text-white">Our planet's rapid rotation and molten nickel-iron core give rise to a magnetic field, which the solar wind distorts into a teardrop shape in space. (The solar wind is a stream of charged particles continuously ejected from the Sun.) When charged particles from the solar wind become trapped in Earth's magnetic field, they collide with air molecules above our planet's magnetic poles. These air molecules then begin to glow and cause aurorae, or the northern and southern lights.
+                                    <br><br>
+            The magnetic field is what causes compass needles to point to the North Pole regardless of which way you turn. But the magnetic polarity of Earth can change, flipping the direction of the magnetic field. The geologic record tells scientists that a magnetic reversal takes place about every 400,000 years on average, but the timing is very irregular. As far as we know, such a magnetic reversal doesn't cause any harm to life on Earth, and a reversal is very unlikely to happen for at least another thousand years. But when it does happen, compass needles are likely to point in many different directions for a few centuries while the switch is being made. And after the switch is completed, they will all point south instead of north.</p>        
+        </div>
+        <br>
+        <footer class="footer">
+            <section>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12 col-lg-4 bg-dark py-4 py-md-5 py-xxl-8">
+                    <div class="row h-100 align-items-end justify-content-center">
+                      <div class="col-12 col-md-11 col-xl-10">
+                        <div class="footer-logo-wrapper">
+                          <a href="#!">
+                            <img src="images/logo.png.png"  width="200px" height="200" style="border-radius: 50%;">
+                          </a>
+                        </div>
+                        <div class="social-media-wrapper mt-5">
+                          <ul class="nav">
+                            <li class="nav-item me-3">
+                              <a class="nav-link link-secondary p-2 bg-light rounded" href="https://www.facebook.com/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                                </svg>
+                              </a>
+                            </li>
+                            <li class="nav-item me-3">
+                              <a class="nav-link link-secondary p-2 bg-light rounded" href="https://www.youtube.com/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                                  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                                </svg>
+                              </a>
+                            </li>
+                            <li class="nav-item me-3">
+                              <a class="nav-link link-secondary p-2 bg-light rounded" href="https://x.com/?lang=en" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                                </svg>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link link-secondary p-2 bg-light rounded" href="https://www.instagram.com/" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                                </svg>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="address-wrapper mt-5">
+                          <address class="mb-2 text-white">Find the best places to Stargaze in the UK,</address>
+                          <p class="mb-2">
+                            <a class="link-light text-decoration-none" href="tel:+15057922430">(505) 792-2430</a>
+                          </p>
+                          <p class="mb-0">
+                            <a class="link-light text-decoration-none" href="mailto:demo@yourdomain.com">info@skygazing.co.uk</a>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-lg-8 py-4 py-md-5 py-xxl-8" style="background-color:  rgb(9, 10, 24);">
+                    <div class="row justify-content-center">
+                      <div class="col-12 col-md-11 col-xxl-10">
+                        <div class="row gy-4 gy-sm-0">
+                            <div class="col-6 col-sm-3">
+                                <div class="widget">
+                                  <h4 class="widget-title mb-4">Site Links</h4>
+                                  <ul class="list-unstyled">
+                                    <li class="mb-3" >
+                                      <a href="#Home" class="link-light footer-links">Home</a>
+                                    </li>
+                                    <li class="mb-3">
+                                      <a href="#Planets" class="link-light footer-links">Planets</a>
+                                    </li>
+                                    <li class="mb-3">
+                                      <a href="#Star gazing" class="link-light footer-links">Star gazing</a>
+                                    </li>
+                                    <li class="mb-3">
+                                        <a href="#!" class="link-light footer-links">Constellations</a>
+                                      </li>
+                                      <li class="mb-3">
+                                        <a href="#Comets" class="link-light footer-links">Comets</a>
+                                      </li>
+                                      <li class="mb-3">
+                                        <a href="#!" class="link-light footer-links">Observation</a>
+                                      </li>
+                                      <li class="mb-3">
+                                        <a href="About us.html" class="link-light footer-links">About us</a>
+                                      </li>
+                                      <li class="mb-3">
+                                        <a href="#!" class="link-light footer-links">Contact us</a>
+                                      </li>
+        
+                                  </ul>
+                                </div>
+                              </div>
+                              <div class="col-6 col-sm-2">
+                                <div class="widget">
+                                  <h4 class="widget-title mb-4">Advise</h4>
+                                  <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                      <a href="star gazing.html" class="link-light footer-links">When is best to starGaze?</a>
+                                    </li>
+                                    <li class="mb-3">
+                                      <a href="star gazing 2.html" class="link-light footer-links">Where is best to starGaze?</a>
+                                    </li>
+                                    <li class="mb-3">
+                                      <a href="star gazing 3.html" class="link-light footer-links">What can you expect to see?</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+            
+                          <div class="col-6 col-sm-3">
+                            <div class="widget">
+                              <h4 class="widget-title mb-4">Planets</h4>
+                              <ul class="list-unstyled">
+                                <li class="mb-3">
+                                  <a href="Mercury.html" class="link-light footer-links">Mercury</a>
+                                </li>
+                                <li class="mb-3">
+                                  <a href="venus.html" class="link-light footer-links">Venus</a>
+                                </li>
+                                <li class="mb-3">
+                                  <a href="Earth.html" class="link-light footer-links">Earth</a>
+                                </li>
+                                <li class="mb-3">
+                                  <a href="mars.html" class="link-light footer-links">Mars</a>
+                                </li>
+                                <li class="mb-3">
+                                  <a href="jupiter.html" class="link-light footer-links">Jupiter</a>
+                                </li>
+                                <li class="mb-3">
+                                  <a href="saturn.html" class="link-light footer-links">Saturn</a>
+                                </li>
+                                <li class="mb-3">
+                                  <a href="neptune.html" class="link-light footer-links">Neptune</a>
+                                </li>
+                                <li class="mb-3">
+                                  <a href="Uranus.html" class="link-light footer-links">Uranus</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                  
+                          <div class="col-12 col-sm-4">
+                            <div class="widget">
+                              <h4 class="widget-title mb-4">Our Website</h4>
+                              <p class="mb-4 text-white">For general inquiries please e-mail <strong>info@skygazing.co.uk</strong> and we will get back to you.</p>
+                              <form action="#!">
+                                <div class="row gy-4">
+                                  <div class="col-12">
+                                    <div class="input-group">
+                                      <span class="input-group-text" id="email-newsletter-addon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                        </svg>
+                                      </span>
+                                      <input type="email" class="form-control" id="email-newsletter" value="" placeholder="Email Address" aria-label="email-newsletter" aria-describedby="email-newsletter-addon" required>
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <div class="d-grid">
+                                      <button class="btn" type="submit">Subscribe</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                
+                              
+                          </div> 
+                          
+                          
+                        </div>
+                        <div class="row mt-6 border-top border-light-subtle">
+                          <div class="footer-copyright-wrapper mt-6 text-white">
+                            &copy; 2024 Sky Gazing. All Rights Reserved.
+                            <div id="ticker">Current Date and Time: <span id="datetime"></span> | Location: <span id="location"></span></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="scripts.js"></script>
+           
+          
+        </body>
+        </html>

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Gazing</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+         h4{
+        font-family: fantasy;
+        font-size: 30px;
+        color: rgb(97, 142, 182);
+    }
+    </style> -->
+</head>
+<body style="background-color: rgb(1, 2, 15);">
+            <!-- Urwa code -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    // Visitor count logic
+    let count = localStorage.getItem('visitorCount') || 0;
+    count++;
+    localStorage.setItem('visitorCount', count);
+    document.getElementById('count').textContent = count;
+
+    // Ticker and Geolocation
+    function updateTicker() {
+        const now = new Date();
+        document.getElementById('datetime').textContent = now.toLocaleString();
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                const { latitude, longitude } = position.coords;
+                document.getElementById('location').textContent = `Lat: ${latitude.toFixed(2)}, Long: ${longitude.toFixed(2)}`;
+            });
+        }
+    }
+
+    setInterval(updateTicker, 1000);
+});
+    </script>
+       <!-- Top Section -->
+       <header class="text-white text-center py-4" style="background-color: rgb(9, 10, 24);">
+        <div class="d-flex justify-content-between align-items-center">
+            <img src="images/logo.png.png" alt="Sky Gazing Logo" class="logo" height="160px" width="130px">
+            <div id="visitor-count">Visitor Count: <span id="count">0</span></div>
+        </div>
+        <h1 class="display-4">SKY GAZING</h1>
+        <p class="lead">Explore the wonders of the universe.</p>
+        
+    </header>
+    <hr class="bg-white">
+     <!-- Navigation Menu -->
+     <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: rgb(97, 142, 182);"><img src="images/logo.png.png" height="80px" width="70px">Sky Gazing</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarnav">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="container-fluid"> 
+          <div class="collapse navbar-collapse justify-content-end" id="navbarnav">
+            <ul class="navbar-nav nav-pills ">
+              <li class="nav-item">
+                <a class="nav-link"  href="#Home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Planets">Planets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Star gazing">Star gazing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Constellations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Comets">Comets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Observation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="About us.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <hr class="bg-white">
+      <!-- Carousel Section -->
+<section id="Home" class="py-5">
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+    
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/stargazing.jpg"  class="d-block" style="width:100%">
+        <div class="carousel-caption">
+            <h3>Stargazing</h3>
+            <p>Many information about stargazing</p>
+          </div>
+        
+      </div>
+      <div class="carousel-item">
+        <img src="images/solar-system2.jpg" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+            <h3>Planets</h3>
+            <p>The Solar system has eight planets,There are five officially recognized dwarf planets in our solar system.</p>
+          </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/telescope.jpg" class="d-block" style="width:100%">
+        <div class="carousel-caption">
+            <h3>Astronomical</h3>
+            <p>Many astronomy observed by sky gazing</p>
+          </div>
+      </div>
+    </div>
+    
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+   <hr class="bg-white">
+<section id="Planets" class="container py-5">
+    <h1 style="color: rgb(126, 165, 229);">About the Planets</h1>
+    <p class="text-white">The solar system has eight planets: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune. There are five officially recognized dwarf planets in our solar system: Ceres, Pluto, Haumea, Makemake, and Eris.</p>
+    <h1 style="color: rgb(126, 165, 229);">Inner Planets</h1>
+    <p class="text-white">The first four planets from the Sun are Mercury, Venus, Earth, and Mars. These inner planets also are known as terrestrial planets because they have solid surfaces.</p>      
+   
+   <!-- Cards -->
+    <div class="row text-center">
+        <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+                <img src="images/mercury.webp">
+                <div class="card-body">
+                    <h3 class="card-title ">Mercury Facts</h3>
+                    <p class="card-text">Mercury is the smallest planet in our solar system, and the nearest to the Sun.</p>
+                    <button class="btn">
+                        <a  href="Mercury.html"><span>Read More</span></a>
+                      </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+                <img src="images/venus.webp">
+                <div class="card-body">
+                    <h3 class="card-title">Venus Facts</h3>
+                    <p>Venus is the second planet from the Sun, and Earth's closest planetary neighbor.</p>
+                    <button class="btn">
+                       <a href="venus.html"><span>Read More</span></a> 
+                      </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3 mb-3">
+            <div class="card h-100">
+                <img src="images/earth.webp">
+                <div class="card-body">
+                    <h3 class="card-title ">Earth Facts</h3>
+                    <p>Earth – our home planet – is the third planet from the Sun, and the fifth largest planet.</p>
+                    <button class="btn">
+                        <a href="Earth.html"><span>Read More</span></a> 
+                      </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3 mb-3 ">
+            <div class="card h-100">
+                <img src="images/mars.webp">
+                <div class="card-body">
+                    <h3 class="card-title">Mars Facts</h3>
+                    <p class="card-text ">Mars – the fourth planet from the Sun – is a dusty, cold, desert world with a very thin atmosphere.</p>
+                    <button class="btn">
+                        <a href="mars.html" ><span>Read More</span></a> 
+                      </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<h1 style="color: rgb(126, 165, 229);">Outer Planets</h1>
+<p class="text-white">The giant planets in our outer solar system don't have hard surfaces and instead have swirling gases above a core. Jupiter and Saturn are gas giants. Uranus and Neptune are ice giants.</p>
+<div class="row text-center">
+    <div class="col-sm-3 mb-3">
+        <div class="card h-100">
+            <img src="images/jupiter.webp">
+            <div class="card-body">
+                <h3 class="card-title ">Jupiter Facts</h3>
+                <p>Jupiter is the largest planet in our solar system – if it were a hollow shell, 1,000 Earths could fit inside.</p>
+                <button class="btn">
+                    <a href="jupiter.html" ><span>Read More</span></a> 
+                  </button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="col-sm-3 mb-3 ">
+        <div class="card h-100 ">
+            <img src="images/saturn.webp" height="150">
+            <div class="card-body">
+                <h3 class="card-title ">Saturn Facts</h3>
+                <p>Saturn is the sixth planet from the Sun, the second-largest planet in our solar system. </p>
+                <button class="btn">
+                    <a href="saturn.html"><span>Read More</span></a> 
+                  </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 mb-3">
+        <div class="card h-100">
+            <img src="images/uranus.webp">
+            <div class="card-body">
+                <h3 class="card-title ">Uranus Facts</h3>
+                <p>The seventh planet from the Sun, Uranus has the third largest diameter of planets in our solar system.</p>
+                <button class="btn">
+                    <a href="Uranus.html"><span>Read More</span></a> 
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3 mb-3 ">
+        <div class="card h-100">
+            <img src="images/neptune.webp">
+            <div class="card-body">
+                <h3 class="card-title">Neptune Facts</h3>
+                <p>Neptune is the eighth and most distant planet in our solar system.</p>
+                <button class="btn">
+                    <a href="neptune.html"><span>Read More</span></a> 
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<h1 class="mt-3" style="color: rgb(126, 165, 229);">Dwarf Planets</h1>
+<p class="mb-2 text-white">Beyond Neptune, a newer class of smaller worlds called dwarf planets reign, including longtime favorite Pluto. The other dwarf planets are Ceres, Makemake, Haumea, and Eris. Ceres is the only dwarf planet in the inner solar system. It's located in the main asteroid belt between Mars and Jupiter.</p>
+<div class="row text-center py-5">
+    <div class="col-sm-4 mb-3">
+        <div class="card h-100">
+            <img src="images/ceres.webp">
+            <div class="card-body">
+                <h3 class="card-title ">Ceres Facts</h3>
+                <p>Dwarf planet Ceres is the largest object in the asteroid belt between Mars and Jupiter, and it's the only dwarf planet located in the inner solar system.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4 mb-3 ">
+        <div class="card h-100">
+            <img src="images/pluto.webp">
+            <div class="card-body">
+                <h3 class="card-title">Pluto Facts </h3>
+                <p>Pluto was long considered our solar system's ninth planet. But it was reclassified as a dwarf planet in 2006 by the International Astronomical Union.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4 mb-3 ">
+        <div class="card h-100">
+            <img src="images/haumea.webp">
+            <div class="card-body">
+                <h3 class="card-title ">Haumea Facts</h3>
+                <p>Haumea was nicknamed Santa by one discovery team. It is oval-shaped, and is one of the fastest rotating large objects in our solar system.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4  mb-3 ">
+        <div class="card h-100">
+            <img src="images/makemake.webp">
+            <div class="card-body">
+                <h3 class="card-title">Makemake Facts</h3>
+                <p>Makemake is slightly smaller than Pluto, and is the second-brightest object in the Kuiper Belt, while Pluto is the brightest.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-4 mb-3">
+        <div class="card h-100">
+            <img src="images/Eris.webp" style="height:200px ;">
+            <div class="card-body">
+                <h3 class="card-title">Eris Facts</h3>
+                <p>The discovery of Eris helped trigger a debate in the scientific community that led to the decision to clarify the definition of a planet.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<hr class="bg-white">
+<section id="Star gazing">
+    <div class="text-center text-white">
+        <h1>Want to know more?</h1>
+        <p style="color: grey;">Hints and tips to help you further your interest in astronomy</p>
+    </div>
+    <div class="container-fluid px-4 px-sm-0 pb-sm-3 pb-md-2 py-2 ">
+        <div class="row">
+            <div class=" col-md-9 col-lg-12 col-sm-6 pt-1" >
+                <div class="card mb-4" style="background-color: #1e1f1f;">
+                    <div class="card-content">
+                        <div class="row d-flex flex-row-reverse">
+                            <div class="col-md-6 d-flex align-items-center"><img class="card-img py-auto" src="images/stargaze.jpg" alt=""></div>
+                            <div class="col-md-6 text-white">
+                                <div class="card-text ps-3 pt-5">
+                                    <h1>When is best to stargaze?</h1>
+                                <p style="color: grey;">If you a planning a trip to a dark sky site or observatory makes sure you time it right with these tips and ticks!</p>
+                                <button class="btn">
+                                    <a href="star gazing.html"><span>Read More</span></a>
+                                </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="col-md-9 col-lg-12 col-sm-6 py-1">
+                <div class="card mb-4" style="background-color: #1e1f1f;">
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col-md-6 d-flex align-items-center"><img class="card-img py-auto" src="images/milky sky.jpg" alt=""></div>
+                            <div class="col-md-6 text-white">
+                                <div class="card-text ps-3 pt-5">
+                                    <h1>Where is best to stargaze?</h1>
+                                    <p style="color: grey;">From Dark sky reserve and discovery sites to your nearby beauty spots, We offer advice on finding the best stargazing locations!</p>
+                                    <button class="btn">
+                                        <a href="star gazing 2.html"><span>Read More</span></a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br> <br>
+            <div class="col-md-9 col-lg-12 col-sm-6 py-1">
+                <div class="card mb-4" style="background-color: #1e1f1f;">
+                    <div class="card-content">
+                        <div class="row d-flex flex-row-reverse">
+                            <div class="col-md-6 d-flex align-items-center"><img class="card-img py-auto" src="images/clusters.webp" alt=""></div>
+                            <div class="col-md-6 text-white">
+                                <div class="card-text ps-3 pt-5">
+                                    <h1 class="d-inline">When can you expect to see?</h1>
+                                    <p style="color: grey;">From clusters to double stars,nebulae to glaxies.... What exactly might you expect to see when stargazing?</p>
+                                    <button class="btn">
+                                        <a href="star gazing 3.html"><span>Read More</span></a>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="Comets">
+    <div class="text-center text-white"><h1>Comets</h1></div>
+    <div class="gallery">
+        <div class="card-div ">1</div>
+        <div class="card-div ">
+            <h1 style="color: rgb(126, 165, 229);">Comets</h1>
+            <p class=" card-text text-white ">In the distant past, people were both awed and alarmed by comets, perceiving them as long-haired stars that appeared in the sky unannounced and unpredictably. Chinese astronomers kept extensive records for centuries, including illustrations of characteristic types of comet tails, times of cometary appearances and disappearances, and celestial positions.</p>
+        </div>
+        <div class="card-div">
+            <h1 style="color: rgb(126, 165, 229);" >Where Do Comets Come From?</h1>
+            <p class="card-text text-white">As theorized by astronomer Gerard Kuiper in 1951, a disc-like belt of icy bodies exists beyond Neptune, where a population of dark comets orbits the Sun in the realm of Pluto.Become the so-called short-period comets.</p>
+            <button class="btn">
+                <a href="https://science.nasa.gov/solar-system/comets/facts/#h-how-comets-get-their-names" target="_blank" style="text-decoration: none;"><span>More Info</span></a>
+            </button>
+        </div>
+        <div class="card-div">
+            <h1 style="color: rgb(126, 165, 229);">Swift Tuttle</h1>
+            <p class="card-text text-white">Comets are cosmic snowballs of frozen gases, rock, and dust that orbit the Sun. When frozen, they are the size of a small town. When a comet's orbit brings it close to the Sun.</p>
+            <video autoplay loop muted style="width: 390px; height: 200px; border-radius: 15px;">
+                <source src="videos/comets video.mp4" type="video/mp4">
+              </video>
+        </div>
+        <div class="card-div"></div>
+    </div>
+</section>
+<br>
+<footer class="footer">
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-lg-4 bg-dark py-4 py-md-5 py-xxl-8">
+            <div class="row h-100 align-items-end justify-content-center">
+              <div class="col-12 col-md-11 col-xl-10">
+                <div class="footer-logo-wrapper">
+                  <a href="#!">
+                    <img src="images/logo.png.png"  width="200px" height="200" style="border-radius: 50%;">
+                  </a>
+                </div>
+                <div class="social-media-wrapper mt-5">
+                  <ul class="nav">
+                    <li class="nav-item me-3">
+                      <a class="nav-link link-secondary p-2 bg-light rounded" href="https://www.facebook.com/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="nav-item me-3">
+                      <a class="nav-link link-secondary p-2 bg-light rounded" href="https://www.youtube.com/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                          <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="nav-item me-3">
+                      <a class="nav-link link-secondary p-2 bg-light rounded" href="https://x.com/?lang=en" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                          <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                        </svg>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link link-secondary p-2 bg-light rounded" href="https://www.instagram.com/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="address-wrapper mt-5">
+                  <address class="mb-2 text-white">Find the best places to Stargaze in the UK,</address>
+                  <p class="mb-2">
+                    <a class="link-light text-decoration-none" href="tel:+15057922430">(505) 792-2430</a>
+                  </p>
+                  <p class="mb-0">
+                    <a class="link-light text-decoration-none" href="mailto:demo@yourdomain.com">info@skygazing.co.uk</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-8 py-4 py-md-5 py-xxl-8" style="background-color:  rgb(9, 10, 24);">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-11 col-xxl-10">
+                <div class="row gy-4 gy-sm-0">
+                    <div class="col-6 col-sm-3">
+                        <div class="widget">
+                          <h4 class="widget-title mb-4">Site Links</h4>
+                          <ul class="list-unstyled">
+                            <li class="mb-3" >
+                              <a href="#Home" class="link-light footer-links">Home</a>
+                            </li>
+                            <li class="mb-3">
+                              <a href="#Planets" class="link-light footer-links">Planets</a>
+                            </li>
+                            <li class="mb-3">
+                              <a href="#Star gazing" class="link-light footer-links">Star gazing</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#!" class="link-light footer-links">Constellations</a>
+                              </li>
+                              <li class="mb-3">
+                                <a href="#Comets" class="link-light footer-links">Comets</a>
+                              </li>
+                              <li class="mb-3">
+                                <a href="#!" class="link-light footer-links">Observation</a>
+                              </li>
+                              <li class="mb-3">
+                                <a href="About us.html" class="link-light footer-links">About us</a>
+                              </li>
+                              <li class="mb-3">
+                                <a href="#!" class="link-light footer-links">Contact us</a>
+                              </li>
+
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-6 col-sm-2">
+                        <div class="widget">
+                          <h4 class="widget-title mb-4">Advise</h4>
+                          <ul class="list-unstyled">
+                            <li class="mb-3">
+                              <a href="star gazing.html" class="link-light footer-links">When is best to starGaze?</a>
+                            </li>
+                            <li class="mb-3">
+                              <a href="star gazing 2.html" class="link-light footer-links">Where is best to starGaze?</a>
+                            </li>
+                            <li class="mb-3">
+                              <a href="star gazing 3.html" class="link-light footer-links">What can you expect to see?</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                  <div class="col-6 col-sm-3">
+                    <div class="widget">
+                      <h4 class="widget-title mb-4">Planets</h4>
+                      <ul class="list-unstyled">
+                        <li class="mb-3">
+                          <a href="Mercury.html" class="link-light footer-links">Mercury</a>
+                        </li>
+                        <li class="mb-3">
+                          <a href="venus.html" class="link-light footer-links">Venus</a>
+                        </li>
+                        <li class="mb-3">
+                          <a href="Earth.html" class="link-light footer-links">Earth</a>
+                        </li>
+                        <li class="mb-3">
+                          <a href="mars.html" class="link-light footer-links">Mars</a>
+                        </li>
+                        <li class="mb-3">
+                          <a href="jupiter.html" class="link-light footer-links">Jupiter</a>
+                        </li>
+                        <li class="mb-3">
+                          <a href="saturn.html" class="link-light footer-links">Saturn</a>
+                        </li>
+                        <li class="mb-3">
+                          <a href="neptune.html" class="link-light footer-links">Neptune</a>
+                        </li>
+                        <li class="mb-3">
+                          <a href="Uranus.html" class="link-light footer-links">Uranus</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+          
+                  <div class="col-12 col-sm-4">
+                    <div class="widget">
+                      <h4 class="widget-title mb-4">Our Website</h4>
+                      <p class="mb-4 text-white">For general inquiries please e-mail <strong>info@skygazing.co.uk</strong> and we will get back to you.</p>
+                      <form action="#!">
+                        <div class="row gy-4">
+                          <div class="col-12">
+                            <div class="input-group">
+                              <span class="input-group-text" id="email-newsletter-addon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                </svg>
+                              </span>
+                              <input type="email" class="form-control" id="email-newsletter" value="" placeholder="Email Address" aria-label="email-newsletter" aria-describedby="email-newsletter-addon" required>
+                            </div>
+                          </div>
+                          <div class="col-12">
+                            <div class="d-grid">
+                              <button class="btn" type="submit">Subscribe</button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+        
+                      
+                  </div> 
+                  
+                  
+                </div>
+                <div class="row mt-6 border-top border-light-subtle">
+                  <div class="footer-copyright-wrapper mt-6 text-white">
+                    &copy; 2024 Sky Gazing. All Rights Reserved.
+                    <div id="ticker">Current Date and Time: <span id="datetime"></span> | Location: <span id="location"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="scripts.js"></script>
+   
+  
+</body>
+</html>
